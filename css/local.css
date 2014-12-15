@@ -1,0 +1,92 @@
+div.contact
+{
+	font-size: small;
+
+}
+div.contact table
+{
+	margin-left: auto;
+	margin-right: auto;
+}
+div.contact table th
+{
+	font-variant: small-caps;
+	text-align: right;
+}
+p.NavBar
+{
+	text-align: center
+}
+div.PersonInfo
+{
+	padding-top: 2em;
+	padding-left: 22em;
+}
+div.Photo
+{
+	margin: 2em 0em 3em 0em;
+	float: left
+}
+div.PhotoFrame
+{
+	margin: -1em 0.5em 0 -1em;
+	padding: 0em
+}
+div.Shadow
+{
+	padding: 0.4em 0em 0.4em 0.4em;
+	background: #888;
+	margin: 1em 0em 0em 1em
+}
+img.Photo
+{
+	border: solid;
+	border-width: thin;
+	border-color: black
+}
+h2.PersonInfo
+{
+	font-family: sans-serif;
+	font-variant: small-caps;
+	font-weight: bold;
+	font-size: small;
+}
+ul.PersonInfo
+{
+	font-size: small
+}
+dt.Contact
+{
+	font-size: small;
+	font-weight: bold;
+	font-variant: small-caps
+}
+dd.Contact
+{
+	font-size: small
+}
+span.PaperTitle
+{
+	font-weight: bold
+}
+span.ConferenceName
+{
+	font-style: italic
+}
+li.publications
+{
+	margin-bottom: 1em
+}
+a:link {
+    text-decoration:  none;
+}
+.bibtitle {
+    font-weight: bold;
+    font-style: italic;
+}
+.bibauthor {
+    font-style: italic;
+}
+.biblink {
+}
+

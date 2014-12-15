@@ -1,0 +1,24 @@
+<a id="skip-content" name="skip-content"> </a>
+<ul id="nav-breadcrumb">
+  <li class="first"><a href="https://www.cl.cam.ac.uk">Computer Laboratory</a></li>
+  {% for crumb in site.data.breadcrumbs %}
+  <li><a href="{{crumb.url}}">{{crumb.name}}</a></li>
+  {% endfor %}
+  <li><a href="{{site.baseurl}}">{{site.title}}</a></li>
+  {% comment %}
+  If we're not a page in the top-level directory and we're not the index page
+  within a subdirectory, then add an extra breadcrumb for the subheading.
+  {% endcomment %}
+  {% if page.dir != '/' %}
+    {% unless page.name contains 'index.' %}
+      {% for section in site.pages %}
+        {% if page.dir == section.dir and section.name contains 'index.' %}
+  <li><a href="{{site.baseurl}}{{section.url}}">{{section.title}}</a></li>
+        {% endif %}
+      {% endfor %}
+    {% endunless %}
+  {% endif %}
+  {% if page.title %}
+  <li><a href="{{site.baseurl}}{{page.url}}">{{page.title}}</a></li>
+  {% endif %}
+</ul>

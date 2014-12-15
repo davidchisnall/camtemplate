@@ -1,0 +1,62 @@
+---
+layout: default
+---
+
+<div class="wrapper">
+<div class="Photo">
+  <div class="Shadow">
+    <div class="PhotoFrame">
+      <img src="photo.jpg" {% if page.photoinfo %}alt="{{page.photoinfo}}"{% endif %} class="Photo" />
+    </div>
+  </div>
+  <div class="contact">
+  <table>
+    <tr><th>Address</th><td>
+        University of Cambridge<br />
+        William Gates Building<br />
+        15 JJ Thomson Avenue<br />
+        Cambridge CB3 1FD<br />
+        United Kingdom
+    </td></tr>
+  <p>
+  {% if site.data.author.office %}
+  <tr>
+    <th>Office:</th>
+    <td><a href="http://www.cl.cam.ac.uk/research/dtg/openroommap/static/?h={{ site.data.author.office }}"> {{ site.data.author.office }}</a>, William Gates Building</td>
+  </tr>
+  {% endif %}
+  {% if site.data.author.phoneext %}
+  <tr>
+    <th>Telephone:</th>
+    <td>+44 (0)1223 {{ site.data.author.phoneext }}</td>
+  </tr>
+  <tr>
+    <th>Fax:</th>
+    <td>+44 (0)1223 334 678</td>
+  </tr>
+  {% endif %}
+  {% if site.data.author.firstname %}
+  {% if site.data.author.surname %}
+  <tr>
+    <th>E-mail:</th>
+    <td>{{ site.data.author.firstname }}.{{ site.data.author.surname }} AT cl.cam.ac.uk</td>
+  </tr>
+  {% endif %}
+  {% endif %}
+  </table>
+  </div>
+</div>
+      
+
+<div class="PersonInfo">
+  {{ content }}
+</div>
+</div>
+
+<hr />
+
+<h2>Recent Publications</h2>
+
+<p>A full list is available on the <a href="publications.html">publications page</a>.</p>
+
+{% bibliography --max 5 --query @article, @inproceedings %}

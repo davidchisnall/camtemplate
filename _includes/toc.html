@@ -1,0 +1,33 @@
+<ul id="nav-primary">
+  <li {% if page.url == '/index.html' %}class="active"{% endif %}>
+    <div>
+      <a href="{{ site.baseurl }}/">{{ site.title }}</a>
+    </div>
+  </li>
+  {% for section in site.pages %}
+    {% if section.dir == '/' or section.name contains 'index.' %}
+      {% if section.title %}
+  <li {% if section.title == page.title %}class="active"{% endif %} >
+  <div>
+    <a href="{{ site.baseurl }}{{ section.url }}">{{ section.title }}</a>
+  </div>
+        {% if section.dir != '/' and section.dir == page.dir %}
+    <ul>
+          {% for subsection in site.pages %}
+            {% unless subsection.name contains 'index.' %} 
+              {% if subsection.dir == page.dir %}
+      <li {% if subsection.title == page.title %}class="active"{% endif %} >
+        <div>
+          <a href="{{ site.baseurl }}{{ subsection.url }}">{{ subsection.title }}</a>
+        </div>
+      </li>
+              {% endif %}
+            {% endunless %}
+          {% endfor %}
+    </ul>
+        {% endif %}
+  </li>
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+</ul>
