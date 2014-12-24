@@ -1,7 +1,359 @@
-# Publications here will be automatically inserted into the publications page
-@article{example1,
-	author = {My Name and Some Guy},
-	title  = {Example},
-	abstract = {In this paper, we write loren ipsum a load of times},
-	pdf = {http://example.com/nonexistent.pdf}
+
+@TechReport{UCAM-CL-TR-864,
+  author =	 {Watson, Robert N. M. and Neumann, Peter G. and Woodruff,
+          	  Jonathan and Anderson, Jonathan and Chisnall, David and
+          	  Davis, Brooks and Laurie, Ben and Moore, Simon W. and
+          	  Murdoch, Steven J. and Roe, Michael},
+  title = 	 {{Capability Hardware Enhanced RISC Instructions: CHERI
+         	   Instruction-set architecture}},
+  year = 	 2014,
+  month = 	 dec,
+  institution =  {University of Cambridge, Computer Laboratory},
+  address =	 {15 JJ Thomson Avenue, Cambridge CB3 0FD, United Kingdom,
+          	  phone +44 1223 763500},
+  number = 	 {UCAM-CL-TR-864},
+  abstract = {This technical report describes CHERI ISAv3, the third version of the Capability Hardware Enhanced RISC Instructions (CHERI) Instruction-Set Architecture (ISA). CHERI is being developed by SRI International and the University of Cambridge. This design captures four years of development, refinement, formal analysis, and testing, and is a substantial enhancement to their ISA version described in UCAM-CL-TR-850. Key improvements lie in tighter C-language integration, and more mature support for software object-capability models; these changes result from experience gained in adapting software to run on prototype hardware.
+
+The CHERI instruction set is based on a hybrid capability-system architecture that adds new capability-system primitives to a commodity 64-bit RISC ISA enabling software to efficiently implement fine-grained memory protection and a hardware-software object-capability security model. These extensions support incrementally adoptable, high-performance, formally based, programmer-friendly underpinnings for fine-grained software decomposition and compartmentalization, motivated by and capable of enforcing the principle of least privilege. The CHERI system architecture purposefully addresses known performance and robustness gaps in commodity ISAs that hinder the adoption of more secure programming models centered around the principle of least privilege. To this end, CHERI blends traditional paged virtual memory with a per-address-space capability model that includes capability registers, capability instructions, and tagged memory that have been added to the 64-bit MIPS ISA via a new capability coprocessor. CHERI also learns from the C-language fat-pointer literature; CHERI capabilities can describe not only regions of memory, but can also capture C pointer semantics allowing substitution for pointers in generated code.
+
+CHERI's hybrid system approach, inspired by the Capsicum security model, allows incremental adoption of capability-oriented software design: software implementations that are more robust and resilient can be deployed where they are most needed, while leaving less critical software largely unmodified, but nevertheless suitably constrained to be incapable of having adverse effects. For example, we are focusing conversion efforts on low-level TCB components of the system: separation kernels, hypervisors, operating system kernels, language runtimes, and userspace TCBs such as web browsers. Likewise, we see early-use scenarios (such as data compression, protocol parsing, image processing, and video processing) that relate to particularly high-risk software libraries, which are concentrations of both complex and historically vulnerability-prone code combined with untrustworthy data sources, while leaving containing applications unchanged.
+
+This report describes the CHERI Instruction-Set Architecture (ISA) and design, and provides reference documentation and potential memory models, along with their requirements. It also briefly addresses the CHERI system hardware-software architecture, documenting our current thinking on integrating programming languages and operating systems with the CHERI hardware.
+  }
 }
+@TechReport{UCAM-CL-TR-853,
+  author =	 {Watson, Robert N.M. and Chisnall, David and Davis, Brooks
+          	  and Koszek, Wojciech and Moore, Simon W. and Murdoch,
+          	  Steven J. and Neumann, Peter G. and Woodruff, Jonathan},
+  title = 	 {{Bluespec Extensible RISC Implementation: BERI Software reference}},
+  year = 	 2014,
+  month = 	 apr,
+  url = 	 {http://www.cl.cam.ac.uk/techreports/UCAM-CL-TR-853.pdf},
+  institution =  {University of Cambridge, Computer Laboratory},
+  number = 	 {UCAM-CL-TR-853},
+  abstract = {The BERI Software Reference documents how to build and use FreeBSD on the Bluespec Extensible RISC Implementation (BERI) developed by SRI International and the University of Cambridge. The reference is targeted at hardware and software programmers who will work with BERI or BERI-derived systems.}
+}
+@TechReport{UCAM-CL-TR-852,
+  author =	 {Watson, Robert N.M. and Woodruff, Jonathan and Chisnall,
+          	  David and Davis, Brooks and Koszek, Wojciech and Markettos,
+          	  A. Theodore and Moore, Simon W. and Murdoch, Steven J. and
+          	  Neumann, Peter G. and Norton, Robert and Roe, Michael},
+  title = 	 {{Bluespec Extensible RISC Implementation: BERI Hardware reference}},
+  year = 	 2014,
+  month = 	 apr,
+  url = 	 {http://www.cl.cam.ac.uk/techreports/UCAM-CL-TR-852.pdf},
+  institution =  {University of Cambridge, Computer Laboratory},
+  number = 	 {UCAM-CL-TR-852},
+  abstract = {The BERI Hardware Reference documents the Bluespec Extensible RISC Implementation (BERI) developed by SRI International and the University of Cambridge. The reference is targeted at hardware and software developers working with the BERI1 and BERI2 processor prototypes in simulation and synthesized to FPGA targets. We describe how to use the BERI1 and BERI2 processors in simulation, the BERI1 debug unit, the BERI unit-test suite, how to use BERI with Altera FPGAs and Terasic DE4 boards, the 64-bit MIPS and CHERI ISAs implemented by the prototypes, the BERI1 and BERI2 processor implementations themselves, and the BERI Programmable Interrupt Controller (PIC).}
+}
+@TechReport{UCAM-CL-TR-851,
+  author =	 {Watson, Robert N.M. and Chisnall, David and Davis, Brooks
+          	  and Koszek, Wojciech and Moore, Simon W. and Murdoch,
+          	  Steven J. and Neumann, Peter G. and Woodruff, Jonathan},
+  title = 	 {{Capability Hardware Enhanced RISC Instructions: CHERI
+         	   User's guide}},
+  year = 	 2014,
+  month = 	 apr,
+  url = 	 {http://www.cl.cam.ac.uk/techreports/UCAM-CL-TR-851.pdf},
+  institution =  {University of Cambridge, Computer Laboratory},
+  number = 	 {UCAM-CL-TR-851},
+  abstract = {The CHERI User’s Guide documents the software environment for the Capability Hardware Enhanced RISC Instructions (CHERI) prototype developed by SRI International and the University of Cambridge. The User’s Guide is targeted at hardware and software developers working with capability-enhanced software. It describes the CheriBSD operating system, a version of the FreeBSD operating system that has been adapted to support userspace capability systems via the CHERI ISA, and the CHERI Clang/LLVM compiler suite. It also describes the earlier Deimos demonstration microkernel.}
+}
+@TechReport{UCAM-CL-TR-850,
+  author =	 {Watson, Robert N.M. and Neumann, Peter G. and Woodruff,
+          	  Jonathan and Anderson, Jonathan and Chisnall, David and
+          	  Davis, Brooks and Laurie, Ben and Moore, Simon W. and
+          	  Murdoch, Steven J. and Roe, Michael},
+  title = 	 {{Capability Hardware Enhanced RISC Instructions: CHERI
+         	   Instruction-set architecture}},
+  year = 	 2014,
+  month = 	 apr,
+  url = 	 {http://www.cl.cam.ac.uk/techreports/UCAM-CL-TR-850.pdf},
+  institution =  {University of Cambridge, Computer Laboratory},
+  number = 	 {UCAM-CL-TR-850},
+  abstract = {This document describes the rapidly maturing design for the Capability Hardware Enhanced RISC Instructions (CHERI) Instruction-Set Architecture (ISA), which is being developed by SRI International and the University of Cambridge. The document is intended to capture our evolving architecture, as it is being refined, tested, and formally analyzed. We have now reached 70% of the time for our research and development cycle.
+
+CHERI is a hybrid capability-system architecture that combines new processor primitives with the commodity 64-bit RISC ISA enabling software to efficiently implement fine-grained memory protection and a hardware-software object-capability security model. These extensions support incrementally adoptable, high-performance, formally based, programmer-friendly underpinnings for fine-grained software decomposition and compartmentalization, motivated by and capable of enforcing the principle of least privilege. The CHERI system architecture purposefully addresses known performance and robustness gaps in commodity ISAs that hinder the adoption of more secure programming models centered around the principle of least privilege. To this end, CHERI blends traditional paged virtual memory with a per-address-space capability model that includes capability registers, capability instructions, and tagged memory that have been added to the 64-bit MIPS ISA via a new capability coprocessor.
+
+CHERI’s hybrid approach, inspired by the Capsicum security model, allows incremental adoption of capability-oriented software design: software implementations that are more robust and resilient can be deployed where they are most needed, while leaving less critical software largely unmodified, but nevertheless suitably constrained to be incapable of having adverse effects. For example, we are focusing conversion efforts on low-level TCB components of the system: separation kernels, hypervisors, operating system kernels, language runtimes, and userspace TCBs such as web browsers. Likewise, we see early-use scenarios (such as data compression, image processing, and video processing) that relate to particularly high-risk software libraries, which are concentrations of both complex and historically vulnerability-prone code combined with untrustworthy data sources, while leaving containing applications unchanged.
+
+This report describes the CHERI architecture and design, and provides reference documentation for the CHERI instruction-set architecture (ISA) and potential memory models, along with their requirements. It also documents our current thinking on integration of programming languages and operating systems. Our ongoing research includes two prototype processors employing the CHERI ISA, each implemented as an FPGA soft core specified in the Bluespec hardware description language (HDL), for which we have integrated the application of formal methods to the Bluespec specifications and the hardware-software implementation.}
+}
+
+
+@inproceedings{ChisnallCPDP11,
+  author = {David Chisnall and Colin Rothwell and Brooks Davis and Robert Watson and Jonathan Woodruff and Simon Moore and Peter G. Neumann and Michael Roe},
+  title = {Beyond the PDP-11: Processor support for a memory-safe C abstract machine},
+  booktitle = {Proceedings of the Fifteenth Edition of ASPLOS on Architectural Support for Programming Languages and Operating Systems},
+  series = {ASPLOS XX},
+  year = {2015},
+  location = {Istanbul, Turkey},
+  numpages = {15},
+  publisher = {ACM},
+  address = {New York, NY, USA},
+  keywords = {C, memory safety, memory models, code generation},
+} 
+
+@article{2677030,
+ author = {David Chisnall},
+ title = {No such thing as a general-purpose processor},
+ journal = {Communications of the ACM},
+ volume = {57},
+ number = {12},
+ year = {2014},
+ issn = {0001-0782},
+ pages = {44--48},
+ doi = {http://doi.acm.org/10.1145/2677030},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ pdf = {http://dl.acm.org/authorize?N83787}
+}
+@article{Chisnall20144,
+  title = "Smalltalk in a C world",
+  journal = "Science of Computer Programming",
+  volume = "96, Part 1",
+  number = "0",
+  pages = "4 - 16",
+  year = "2014",
+  mon = "dec",
+  note = "Special issue on Advances in Smalltalk based Systems ",
+  issn = "0167-6423",
+  doi = "http://dx.doi.org/10.1016/j.scico.2013.10.013",
+  url = "http://www.sciencedirect.com/science/article/pii/S0167642313002852",
+  author = "David Chisnall",
+  keywords = "Smalltalk",
+  keywords = "Objective-C",
+  keywords = "Object-oriented languages",
+  keywords = "Late-bound languages",
+  keywords = "Optimisation ",
+  abstract = "A modern developer is presented with a continuum of choices of programming languages, ranging from assembly languages and C up to high-level domain-specific languages. It is very rare for a single language to be the best possible choice for everything, and the sweet spot with an optimal trade between ease of development and performance changes depending on the target platform.
+
+    We present an interoperable framework for allowing code written in C (potentially with inline assembly), Objective-C, Smalltalk, and higher-level domain-specific languages to coexist with very low cognitive or performance overhead. Our implementation shares an underlying object model, in interpreted, JIT-compiled and statically compiled code among all languages, allowing a single object to have methods implemented in any of the supported languages. We also describe several techniques that we have used to improve the performance of late-bound dynamic languages. "
+}
+@article{Chisnall:2014:TNT:2685690.2687011,
+  author = {Chisnall, David},
+  title = {There's No Such Thing As a General-purpose Processor},
+  journal = {Queue},
+  issue_date = {October 2014},
+  volume = {12},
+  number = {10},
+  month = oct,
+  year = {2014},
+  issn = {1542-7730},
+  pages = {20:20--20:25},
+  articleno = {20},
+  numpages = {6},
+  url = {http://doi.acm.org/10.1145/2685690.2687011},
+  doi = {10.1145/2685690.2687011},
+  acmid = {2687011},
+  publisher = {ACM},
+  address = {New York, NY, USA},
+} 
+
+
+@inproceedings{2665740,
+ author = {Woodruff, Jonathan and Watson, Robert N.M. and Chisnall, David and Moore, Simon W. and Anderson, Jonathan and Davis, Brooks and Laurie, Ben and Neumann, Peter G. and Norton, Robert and Roe, Michael},
+ title = {The CHERI capability model: revisiting RISC in an age of risk},
+ booktitle = {ISCA '14: Proceeding of the 41st annual international symposium on Computer architecuture},
+ year = {2014},
+ isbn = {978-1-4799-4394-4},
+ doi = {http://dx.doi.org/10.1145/2678373.2665740},
+ pages = {457--468},
+ location = {Minneapolis, Minnesota, USA},
+ publisher = {IEEE Press},
+ address = {Piscataway, NJ, USA},
+ abstract = {Motivated by contemporary security challenges, we reevaluate and refine capability-based addressing for the RISC era. We present CHERI, a hybrid capability model that extends the 64-bit MIPS ISA with byte-granularity memory protection. We demonstrate that CHERI enables language memory model enforcement and fault isolation in hardware rather than software, and that the CHERI mechanisms are easily adopted by existing programs for efficient in-program memory safety. In contrast to past capability models, CHERI complements, rather than replaces, the ubiquitous page-based protection mechanism, providing a migration path towards deconflating data-structure protection and OS memory management. Furthermore, CHERI adheres to a strict RISC philosophy: it maintains a load-store architecture and requires only singlecycle instructions, and supplies protection primitives to the compiler, language runtime, and operating system. We demonstrate a mature FPGA implementation that runs the FreeBSD operating system with a full range of software and an open-source application suite compiled with an extended LLVM to use CHERI memory protection. A limit study compares published memory safety mechanisms in terms of instruction count and memory overheads. The study illustrates that CHERI is performance-competitive even while providing assurance and greater flexibility with simpler hardware},
+ pdf = {http://dl.acm.org/ft_gateway.cfm?id=2665740&type=pdf},
+}
+@inproceedings{llvmfreebsd2014,
+  author = {David Chisnall},
+  title = {LLVM in the FreeBSD Toolchain},
+  booktitle ={Proceedings of AsiaBSDCon 2014}, 
+  address = {Tokyo, Japan}, 
+  month = {March},
+  days = {13–16},
+  year = {2014},
+  pdf = {http://www.cl.cam.ac.uk/research/security/ctsrd/pdfs/201403-asiabsdcon2014-llvmbsd.pdf}
+}
+
+@inproceedings{2592801,
+ author = {Anderson, Jonathan and Watson, Robert N. M. and Chisnall, David and Gudka, Khilan and Marinos, Ilias and Davis, Brooks},
+ title = {TESLA: temporally enhanced system logic assertions},
+ booktitle = {EuroSys '14: Proceedings of the Ninth European Conference on Computer Systems},
+ year = {2014},
+ isbn = {978-1-4503-2704-6},
+ pages = {1--14},
+ location = {Amsterdam, The Netherlands},
+ doi = {http://doi.acm.org/10.1145/2592798.2592801},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ abstract = {
+    Large, complex, rapidly evolving pieces of software such as operating systems are notoriously difficult to prove correct. Developers instead describe expected behaviour through assertions and check actual behaviour through testing. However, many dynamic safety properties cannot be validated this way as they are temporal: they depend on events in the past or future and are not easily expressed in assertions.
+
+    TESLA is a description, analysis, and validation tool that allows systems programmers to describe expected temporal behaviour in low-level languages such as C. Temporal assertions can span the interfaces between libraries and even languages. TESLA exposes run-time behaviour using program instrumentation, illuminating coverage of complex state machines and detecting violations of specifications.
+
+    We apply TESLA to complex software, including an OpenSSL security API, the FreeBSD Mandatory Access Control framework, and GNUstep's rendering engine. With performance allowing "always-on" availability, we demonstrate that existing systems can benefit from richer dynamic analysis without being re-written for amenability to a complete formal analysis.
+   },
+ pdf = {http://www.cl.cam.ac.uk/research/security/ctsrd/pdfs/201406-isca2014-cheri.pdf}
+ }
+@article{2534719,
+ author = {Chisnall, David},
+ title = {The challenge of cross-language interoperability},
+ journal = {Communications of the ACM},
+ volume = {56},
+ number = {12},
+ year = {2013},
+ issn = {0001-0782},
+ pages = {50--56},
+ doi = {http://doi.acm.org/10.1145/2534706.2534719},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ abstract = {
+    Interoperability between languages has been a problem since the second programming language was invented.  Various solutions have been proposed, ranging from language-independent object models like COM and CORBA to VMs designed to integrate languages like the JVM and CLR.  With software becoming ever more complex and hardware less homogeneous, the likelihood of a single language being the correct tool for the job for all of a program is lower than ever.  As modern compilers become more modular, there is potential for a new generation of interesting solutions.
+ },
+ pdf = {http://dl.acm.org/authorize?N87790}
+ }
+@article{2543971,
+ author = {Chisnall, David},
+ title = {The Challenge of Cross-language Interoperability},
+ journal = {Queue},
+ volume = {11},
+ number = {10},
+ year = {2013},
+ issn = {1542-7730},
+ pages = {20--28},
+ doi = {http://doi.acm.org/10.1145/2542661.2543971},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ abstract = {
+    Interoperability between languages has been a problem since the second programming language was invented.  Various solutions have been proposed, ranging from language-independent object models like COM and CORBA to VMs designed to integrate languages like the JVM and CLR.  With software becoming ever more complex and hardware less homogeneous, the likelihood of a single language being the correct tool for the job for all of a program is lower than ever.  As modern compilers become more modular, there is potential for a new generation of interesting solutions.
+ },
+ pdf = {http://dl.acm.org/ft_gateway.cfm?id=2543971&type=pdf},
+ }
+@article{2330682,
+ author = {Chisnall, David},
+ title = {A new Objective-C runtime: from research to production},
+ journal = {Communications of the ACM},
+ volume = {55},
+ number = {9},
+ year = {2012},
+ issn = {0001-0782},
+ pages = {44--47},
+ doi = {http://doi.acm.org/10.1145/2330667.2330682},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ pdf = {http://dl.acm.org/authorize?N83788}
+ }
+@inproceedings{2448967,
+ author = {Chisnall, David},
+ title = {Smalltalk in a C world},
+ booktitle = {IWST '12: Proceedings of the International Workshop on Smalltalk Technologies},
+ year = {2012},
+ isbn = {978-1-4503-1897-6},
+ pages = {1--12},
+ location = {Ghent, Belgium},
+ doi = {http://doi.acm.org/10.1145/2448963.2448967},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ abstract = {Smalltalk, in spite of myriad advantages in terms of ease of development, has been largely eclipsed by lower-level languages like C, which has become the lingua franca on modern systems. This paper introduces the Pragmatic Smalltalk compiler, which provides a dialect of Smalltalk that is designed from the ground up for close interoperability with C libraries. We describe how high-level Smalltalk language features are lowered to allow execution without a virtual machine, allowing Smalltalk and C code to be mixed in the same program without hard boundaries between the two. This allows incremental deployment of Smalltalk code in programs and libraries along with heavily optimised low-level C and assembly routines for performance critical segments.},
+ pdf = {http://dl.acm.org/authorize?N83789}
+ }
+@article{2331170,
+ author = {Chisnall, David},
+ title = {A New Objective-C Runtime: from Research to Production},
+ journal = {Queue},
+ volume = {10},
+ number = {7},
+ year = {2012},
+ issn = {1542-7730},
+ pages = {20--24},
+ doi = {http://doi.acm.org/10.1145/2330087.2331170},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ }
+@book{1996266,
+ author = {Chisnall, David},
+ title = {Objective-C Phrasebook},
+ year = {2011},
+ isbn = {0321743628, 9780321743626},
+ publisher = {Addison-Wesley Professional},
+ }
+@book{gophrasebook,
+ author = {Chisnall, David},
+ title = {Go Programming Language Phrasebook},
+ year = {2012},
+ isbn = {0321817141, 9780321817143},
+ publisher = {Addison-Wesley Professional},
+ }
+@book{1875306,
+ author = {Chisnall, David},
+ title = {Cocoa Programming Developer's Handbook},
+ year = {2010},
+ isbn = {0321695003, 9780321695000, 0321639634, 9780321639639},
+ publisher = {Addison-Wesley Professional},
+ }
+@book{1324849,
+ author = {Chisnall, David},
+ title = {The Definitive Guide to the Xen Hypervisor (Prentice Hall Open Source Software Development Series)},
+ year = {2007},
+ isbn = {013234971X},
+ publisher = {Prentice Hall PTR},
+ address = {Upper Saddle River, NJ, USA},
+ }
+@article{1229162,
+ author = {Chisnall, David and Chen, Min and Hansen, Charles},
+ title = {Ray-driven dynamic working set rendering: For complex volume scene graphs involving large point clouds},
+ journal = {Vis. Comput.},
+ volume = {23},
+ number = {3},
+ year = {2007},
+ issn = {0178-2789},
+ pages = {167--179},
+ doi = {http://dx.doi.org/10.1007/s00371-006-0091-6},
+ publisher = {Springer-Verlag New York, Inc.},
+ address = {Secaucus, NJ, USA},
+ abstract = {Ray tracing a volume scene graph composed of multiple point-based volume objects (PBVO) can produce high quality images with effects such as shadows and constructive operations. A naive approach, however, would demand an overwhelming amount of memory to accommodate all point datasets and their associated control structures such as octrees. This paper describes an out-of-core approach for rendering such a scene graph in a scalable manner. In order to address the difficulty in pre-determining the order of data caching, we introduce a technique based on a dynamic, in-core working set. We present a ray-driven algorithm for predicting the working set automatically. This allows both the data and the control structures required for ray tracing to be dynamically pre-fetched according to access patterns determined based on captured knowledge of ray-data intersection. We have conducted a series of experiments on the scalability of the technique using working sets and datasets of different sizes. With the aid of both qualitative and quantitative analysis, we demonstrate that this approach allows the rendering of multiple large PBVOs in a volume scene graph to be performed on desktop computers.}
+ }
+@inproceedings{1471676,
+ author = {Chisnall, David and Min Chen,},
+ title = {The Making of SimEAC},
+ booktitle = {ICAC '06: Proceedings of the 2006 IEEE International Conference on Autonomic Computing},
+ year = {2006},
+ isbn = {1-4244-0175-5},
+ pages = {301--302},
+ doi = {http://dx.doi.org/10.1109/ICAC.2006.1662417},
+ publisher = {IEEE Computer Society},
+ address = {Washington, DC, USA},
+ abstract={In this short paper, we give a brief overview a simulation environment, SimEAC, which was designed for testing algorithms with strong autonomic features. SimEAC enables a user to configure a system infrastructure to be simulated by specifying a collection of hardware attributes and it provides a fine degree of control over operating system and task simulation, hence allowing a variety of autonomic algorithms to be prototyped on a virtual system infrastructure.},
+ }
+@inproceedings{2384813,
+ author = {Chisnall, David and Chen, Min and Hansen, Charles},
+ title = {Knowledge-based out-of-core algorithms for data management in visualization},
+ booktitle = {EUROVIS'06: Proceedings of the Eighth Joint Eurographics / IEEE VGTC conference on Visualization},
+ year = {2006},
+ isbn = {3-905673-31-2},
+ pages = {107--114},
+ location = {Lisbon, Portugal},
+ doi = {http://dx.doi.org/10.2312/VisSym/EuroVis06/107-114},
+ publisher = {Eurographics Association},
+ address = {Aire-la-Ville, Switzerland, Switzerland},
+ abstract = {Data management is the very first issue in handling very large datasets. Many existing out-of-core algorithms used in visualization are closely coupled with application-specific logic. This paper presents two knowledgebased out-of-core prefetching algorithms that do not use hard-coded rendering-related logic. They acquire the knowledge of the access history and patterns dynamically, and adapt their prefetching strategies accordingly. We have compared the algorithms with a demand-based algorithm, as well as a more domain-specific out-of-core algorithm. We carried out our evaluation in conjunction with an example application where rendering multiple point sets in a volume scene graph put a great strain on the rendering algorithm in terms of memory management. Our results have shown that the knowledge-based approach offers a better cache-hit to disk-access trade-off. This work demonstrates that it is possible to build an out-of-core prefetching algorithm without depending on rendering-related application-specific logic. The knowledge based approach has the advantage of being generic, efficient, flexible and self-adaptive.}
+ }
+
+@article{brodlie05eviz,
+  author = {Ken Brodlie and John Brooke and Min Chen and David Chisnall and Ade Fewings and Chris Hughes and Nigel W. John and Mark W. Jones  and Mark Riding and Nicolas Roard},
+  title = {Visual Supercomputing - Technologies, Applications and Challenges},
+  booktitle = {Computer Graphics Forum},
+  year = 2005,
+  issue = 2,
+  number = 24,
+  pages = {217--245},
+}
+@inproceedings{brodlie:2007,
+        author={K. W. Brodlie and J. Brooke and M. Chen and D. Chisnall and C. J. Hughes and Nigel W. John and M. W. Jones and M. Riding and N. Roard and M. Turner and J. D. Wood},
+        title={Adaptive Infrastructure for Visual Computing},
+        booktitle={Theory and Practice of Computer Graphics},
+        year=2007,
+        pages={147--156},
+}
+
