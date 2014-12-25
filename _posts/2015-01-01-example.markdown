@@ -1,0 +1,6 @@
+---
+title: A example post
+layout: post
+---
+
+Here are some words.
