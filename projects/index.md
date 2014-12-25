@@ -1,5 +1,5 @@
 ---
-title: Projects
+title: Student projects
 layout: default
 ---
 
