@@ -94,3 +94,14 @@ If you wish to insert a table of contents for a single page, then include the co
 	{% include contents.markdown %}
 
 This will use the ucampus style, including the animations for selected titles.
+
+A table of contents for the site will be generated automatically.  If you want
+to customise it, then create a `_datacontents.yml` file.  This should contain
+an array of objects with two required properties (`title` and `location`) and
+one optional property (`subheadings`).  The `title` contains the display name
+of the heading, which should match the title of a page.  The location is either
+an absolute URL or the name of a directory at the top level.
+
+The `subheadings` array can contain names of files (with or without their
+suffixes) within the section directory, or objects containing a `title` and
+`location`.
