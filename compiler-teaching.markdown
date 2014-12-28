@@ -5,7 +5,7 @@ layout: default
 ---
 
 I maintain a selection of [resources for teaching about
-compilers](https://github.com/CompilerTeaching) on GitHub.  This includes
+compilers](https://compilerteaching.github.io) on GitHub.  This includes
 several projects:
 
 ###[SimplePass](https://github.com/CompilerTeaching/SimplePass)
