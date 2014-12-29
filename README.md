@@ -105,3 +105,16 @@ an absolute URL or the name of a directory at the top level.
 The `subheadings` array can contain names of files (with or without their
 suffixes) within the section directory, or objects containing a `title` and
 `location`.
+
+GitHub links
+------------
+
+If you have a page that describes a project on GitHub, the set the `github`
+property in the YAML frontmatter.  This project would have something like this:
+
+	---
+	github: davidchisnall/camtemplate
+	---
+
+The page will then have small buttons for viewing the project page on GitHub
+and downloading tarballs inserted.
