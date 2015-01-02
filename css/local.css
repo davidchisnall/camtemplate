@@ -90,3 +90,6 @@ a:link {
 .biblink {
 }
 
+div.github-links {
+	float: right;
+}
