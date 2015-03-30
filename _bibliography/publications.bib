@@ -80,18 +80,22 @@ CHERI’s hybrid approach, inspired by the Capsicum security model, allows incre
 This report describes the CHERI architecture and design, and provides reference documentation for the CHERI instruction-set architecture (ISA) and potential memory models, along with their requirements. It also documents our current thinking on integration of programming languages and operating systems. Our ongoing research includes two prototype processors employing the CHERI ISA, each implemented as an FPGA soft core specified in the Bluespec hardware description language (HDL), for which we have integrated the application of formal methods to the Bluespec specifications and the hardware-software implementation.}
 }
 
-
-@inproceedings{ChisnallCPDP11,
-  author = {David Chisnall and Colin Rothwell and Brooks Davis and Robert N.M. Watson and Jonathan Woodruff and Munraj Vadera and Simon W. Moore and Peter G. Neumann and Michael Roe},
-  title = {Beyond the PDP-11: Processor support for a memory-safe C abstract machine},
-  booktitle = {Proceedings of the Fifteenth Edition of ASPLOS on Architectural Support for Programming Languages and Operating Systems},
-  series = {ASPLOS XX},
+@inproceedings{Chisnall:2015:BPA:2694344.2694367,
+  author = {Chisnall, David and Rothwell, Colin and Watson, Robert N.M. and Woodruff, Jonathan and Vadera, Munraj and Moore, Simon W. and Roe, Michael and Davis, Brooks and Neumann, Peter G.},
+  title = {Beyond the PDP-11: Architectural Support for a Memory-Safe C Abstract Machine},
+  booktitle = {Proceedings of the Twentieth International Conference on Architectural Support for Programming Languages and Operating Systems},
+  series = {ASPLOS '15},
   year = {2015},
+  isbn = {978-1-4503-2835-7},
   location = {Istanbul, Turkey},
-  numpages = {15},
+  pages = {117--130},
+  numpages = {14},
+  url = {http://doi.acm.org/10.1145/2694344.2694367},
+  doi = {10.1145/2694344.2694367},
+  acmid = {2694367},
   publisher = {ACM},
   address = {New York, NY, USA},
-  keywords = {C, memory safety, memory models, code generation},
+  keywords = {C language, bounds checking, capabilities, compilers, memory protection, memory safety, processor design, security},
   pdf = {papers/asplos15-memory-safe-c.pdf}
 } 
 
