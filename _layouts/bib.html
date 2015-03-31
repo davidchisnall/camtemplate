@@ -7,6 +7,8 @@
     {% capture doi %}http://doi.org/{{entry.doi}}{% endcapture %}
   {% endif %}
 {% endif %}
+{% assign url = null %}
+{% assign pdf = null %}
 {% if entry.pdf %}
   {% assign url = entry.pdf %}
 {% elsif entry.url %}
