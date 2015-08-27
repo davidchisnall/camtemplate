@@ -42,9 +42,9 @@
 {% if doi %}
 <a class="biblink" href="{{ doi }}">[<sc>doi</sc>]</a>
 {% endif %}
-<pre id="bibtex-{{ key }}" class="hidden">{{ entry.bibtex %}}</pre>
+<pre id="bibtex-{{ key }}" class="hidden">{{ entry.bibtex }}</pre>
 {% if entry.abstract %}
 <div class="abstract">
-<p id="abstract-{{ key }}" class="hidden">{{ entry.abstract | newline_to_br %}}</p>
+<p id="abstract-{{ key }}" class="hidden">{{ entry.abstract | newline_to_br }}</p>
 </div>
 {% endif %}
