@@ -118,3 +118,10 @@ property in the YAML frontmatter.  This project would have something like this:
 
 The page will then have small buttons for viewing the project page on GitHub
 and downloading tarballs inserted.
+You can also provide just the name of an organisation, for example:
+
+	---
+	github: davidchisnall
+	---
+
+In this case, the 'view on github' button will appear, linking to the organisation but the download links will not.
