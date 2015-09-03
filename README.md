@@ -20,6 +20,40 @@ dependencies (on a system with Ruby installed) with this command:
 
 	$ [sudo] gem install jekyll-scholar
 
+30-second introduction to Jekyll
+--------------------------------
+
+This template uses (Jekyll)[http://jekyllrb.com], so using it requires a little bit of understanding of Jekyll.
+Jekyll can run a local web server that will automatically update the generated pages based on changes to the source:
+
+	$ jekyll serve
+
+This mode is primarily intended for development, so that you can see a live preview while editing.
+Once the site is ready for publication, run:
+
+	$ jekyll build
+
+Note that if you are deploying to (GitHub Pages)[https://pages.github.com] and *not* using any of the Jekyll Scholar (BibTeX) functionality, then you can skip this step and just `git push`.
+
+Beyond this simple usage, it's important to understand a few things about how Jekyll works:
+
+ - Files (and directories) that start with an underscore are not pushed to the site, though they can be included in files that are.
+ - Files that do *not* start with an underscore will be pushed to the site, after preprocessing (if applicable).
+ - Files that are preprocessed should start with a frontmatter section.  This is a yaml dictionary inside a block delimited by `---`.  See the top of this file for a simple example.
+ - Files in Jekyll that are preprocessed are typically constructed in two stages:
+    1. (Liquid){https://github.com/Shopify/liquid/wiki/Liquid-for-Designers} templates are instantiated, to construct a single page from multiple sources.
+    2. As files are included, markup (typically the (kramdown)[http://kramdown.gettalong.org] dialect of (Markdown)[http://daringfireball.net/projects/markdown/]) is translated into HTML.
+
+To give a concrete example, if you are using this template to generate a personal web page, you will use something based on `index.markdown` file as your front page.
+This has frontmatter saying `layout: userpage`, so Jekyll will start producing an `index.html` using the contents of `_layouts/userpage.html`, with the contents of `index.markdown` (now translated into HTML) as its `contents` property.
+The `_layouts/userpage.html` file also provides a layout (`default`), so the structure of the final page will be `_layouts/default.html` at the top level, with `_layouts/userpage.html` embedded in the `{{ contents }}` liquid directive.
+This, in turn, will have the HTML generated from `index.markdown` embedded in its `{{ contents }}` directive.
+
+Each of these steps can also involve other inclusions.
+For example, the `default` layout uses `head.html`, `header.html`, and `footer.html` as include sources, providing consistent layout across different page styles.
+Items in the frontmatter can also determine how the page is rendered.
+For example, if the frontmatter for a page using the `default` layout (directly or indirectly) contains a `github: foo` element, then the page will have a 'view on GitHub' button linking to that organisation or project on GitHub.
+
 Usage
 -----
 
