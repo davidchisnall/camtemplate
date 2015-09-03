@@ -1,0 +1,61 @@
+---
+title: L25 background reading 
+layout: default
+---
+
+This page provides some papers for background reading on L25, organised along the lines of the structure of the course.
+
+Many of the papers are hosted by the ACM Digital Library.
+There is a normally charge for accessing this service, but you can access it for free from the university network.
+**You are not expected to buy any of the papers**.
+If you wish to read the papers elsewhere, then either download them while on the university network, or use [Computer Lab VPN](http://www.cl.cam.ac.uk/local/sys/access/vpn/) to access the ACM Digital Library from any other connection.
+
+The course assessment does not require that you read these papers, but you may find that they are good starting points for exploring areas introduced in the course that you find interesting.
+You may also find inspiration for a miniproject idea in one of the papers.
+
+This is by no means an exhaustive list of relevant papers.
+Following citations is often a good way of finding other interesting things to read.
+This works both backwards (reading papers from the bibliography) and forwards: The 'Cited By' tab in a paper's ACM Digital Library entry often provides links to interesting follow-on work.
+
+Understanding compiler intermediate representations
+---------------------------------------------------
+
+Fred Chow provides a good overview of the requirements of a good IR {% cite Chow:2013:IR:2534706.2534720 --file L25 %}.  This article also covers some of the history of IR design.
+
+Static Single Assignment (SSA) form was developed by the authors of {% cite Cytron:1991:ECS:115372.115320 --file L25 %}, which provides a good overview of the algorithms used to create it.
+
+The original LLVM paper {% cite Lattner:2004:LCF:977395.977673 --file L25 %} provides a good overview of the original motivations and design of LLVM.
+You will note how much the design has changed over time.  Contrast this with the {% cite jvm --file L25 %} Java bytecode specification, which was created for very different goals.
+
+Dynamic dispatch and duck typing
+--------------------------------
+
+The canonical paper for polymorphic inline caching in Self {% cite citeulike:1903110 --file L25 %} is still very relevant.
+
+The lectures skip over the gory details of C++ implementation.  If you really want to know how it works, then the ABI docs explain it all {% cite cxxabi --file L25 %}.
+
+Trace-based JITs originate in dynamic recompilation (not dynamic languages at all!), with Dynamo {% cite Bala:2000:DTD:349299.349303 --file L25 %} introducing the technique.
+Their use in dynamic language implementations is much more recent {% cite Gal:2009:TJT:1542476.1542528 --file L25 %}, with the first implementation appearing in Adobe Flash (for ActionScript) and then being contributed to Mozilla (Tamarin).
+
+Autovectorisation
+-----------------
+
+The SLP vectorizer in LLVM is based on work from 2000 {% cite Larsen:2000:ESL:349299.349320 --file L25 %}.
+A more flexible version of the algorithm {% cite PSLP --file L25 %} (with associated costs in complexity, translating directly to run time) was recently published by researchers in the lab.
+
+There are [a lot of papers on polyhedral optimisation in general](http://polyhedral.info/publications.html), but for the specific interaction with LLVM, Tobias Grossner's diploma thesis {% cite polly --file L25 %} provides a lot of detail.
+
+
+Garbage collection
+------------------
+
+The best overview of garbage collection techniques and the relationship between various approaches is David F. Bacon's Unified Theory {% cite Bacon:2004:UTG:1028976.1028982 --file L25 %}.
+Most collectors use a combination of techniques discussed in this paper.
+
+For something a bit more modern, the C4 collector {% cite Tene:2011:CCC:1993478.1993491 --file L25 %} is close to the state of the art for high-end systems.
+Some more work from IBM shows the state of the art at the embedded end {% cite Bacon:2013:PRG:2502508.2502523 --file L25 %}
+
+Bibliography
+------------
+
+{% bibliography --cited_in_order  --file L25 %}
