@@ -6,7 +6,7 @@ Jekyll template for University of Cambridge Computer Laboratory web pages
 =========================================================================
 
 This is a (Jekyll)[http://jekyllrb.com] template that is intended to mimic the
-functionality an appearance of the ucampus system, with a few helpful
+functionality an appearance of the ucampas system, with a few helpful
 extensions.  It is not officially supported by the University or the Computer
 Lab.
 
@@ -93,7 +93,7 @@ If you wish to insert a table of contents for a single page, then include the co
 
 	{% include contents.markdown %}
 
-This will use the ucampus style, including the animations for selected titles.
+This will use the ucampas style, including the animations for selected titles.
 
 A table of contents for the site will be generated automatically.  If you want
 to customise it, then create a `_datacontents.yml` file.  This should contain
