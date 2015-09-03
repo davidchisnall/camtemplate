@@ -1,0 +1,34 @@
+<div style="width=100% ; clear:both">
+{% if include.style == 'verbose' %}
+{% for person in site.people %}
+{% if include.role == null or person.role == include.role %}
+<div style="clear: both">
+  <div style="float: left; width: 100px; display:inline;">
+    <img src="{{ person.photo }}" width='80px' height='120px' /><br />
+  </div>
+  <div style="">
+    <h3>{% if person.homepage %}<a href="{{ person.homepage }}">{% endif %}{{ person.name }}{% if person.homepage %}</a>{% endif %}</h3>
+
+    <p>{{ person.content }}</p>
+  </div>
+</div>
+{% endif %}
+{% endfor %}
+{% else %}
+{% for person in site.people %}
+{% if include.role == null or person.role == include.role %}
+<div style="float: left; padding: 10px; ">
+  <div>
+    <p style="text-align: center">
+    <img src="{{ person.photo }}" style="margin-left: auto ; margin-right: auto" width='80px' height='120px' /><br />
+    {% if person.homepage %}<a href="{{ person.homepage }}">{% endif %}{{ person.name }}{% if person.homepage %}</a>{% endif %}
+    </p>
+  </div>
+</div>
+{% endif %}
+{% endfor %}
+{% endif %}
+</div>
+<div style="clear: both; width=100%">
+<hr />
+</div>
