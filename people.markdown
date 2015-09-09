@@ -10,17 +10,22 @@ The people.html inclusion will list all of the people if no role is specified.  
 
 {% include contents.markdown %}
 
-Principal Investigators
------------------------
+Principal Investigators (verbose format)
+----------------------------------------
 
 {% include people.html role='PI' style='verbose' %}
 
-Students
---------
+Students (default format)
+-------------------------
 
 {% include people.html role='PhD' %}
 
-Everyone
---------
+Everyone (default format)
+-------------------------
 
 {% include people.html %}
+
+Everyone (brief format)
+-----------------------
+
+{% include people.html style='brief' %}

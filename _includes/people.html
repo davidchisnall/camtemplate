@@ -15,6 +15,17 @@
 {% endif %}
 {% endfor %}
 {% else %}
+{% if include.style == 'brief' %}
+<div style="colum-width: 15em ; column-count: 3; -webkit-column-count: 3; moz-column-count: 3;">
+<ul>
+{% for person in site.people %}
+{% if include.role == null or person.role == include.role %}
+  <li>{% if person.homepage %}<a href="{{ person.homepage }}">{% endif %}{{ person.name }}{% if person.homepage %}</a>{% endif %}</li>
+{% endif %}
+{% endfor %}
+</ul>
+</div>
+{% else %}
 {% for person in site.people %}
 {% if include.role == null or person.role == include.role %}
 <div style="float: left; padding: 10px; ">
@@ -27,6 +38,7 @@
 </div>
 {% endif %}
 {% endfor %}
+{% endif %}
 {% endif %}
 </div>
 <div style="clear: both; width=100%">
