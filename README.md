@@ -159,3 +159,50 @@ You can also provide just the name of an organisation, for example:
 	---
 
 In this case, the 'view on github' button will appear, linking to the organisation but the download links will not.
+
+People pages
+------------
+
+If you are using this template for a project or group page, then you will
+probably want to have a 'people' page.  There is a template people page in
+`people.markdown`, which contains some examples.  Delete the `published: false`
+line at the top of this file to see how it looks.
+
+Each person in your project should have a separate file in `_people`.
+As with other Jekyll files, this starts with YAML frontmatter, which should
+contain the following keys:
+
+`role`
+: The person's role within the project.  This is used to define different
+  categories of person for inclusion in different sections of the page.
+
+`photo`
+: The URL of the person's photo.
+
+`name`
+: The person's name, as they would like it to appear.
+
+`homepage`
+: The URL that this person's name should be linked to.
+
+The remainder of the file contains descriptive text (only used in the verbose
+format).  To define a list of people, include the `people.html` file.  You may
+optionally including a `role` and `style` option.  For example:
+
+	{% include people.html role='PI' style='verbose' %}
+
+This will include all people whose role in the project is `PI` (a string
+identifier - you may use any role names that you wish), with the verbose
+layout.  If `role` is omitted, then everyone will be included.  There are three
+different layouts currently available:
+
+`verbose`
+: One person per line, with the photo on the left and the descriptive text on
+  the right.
+
+`brief`
+: A three-column list, containing only the names (no photo or long description).
+
+`default`
+: The view presented if no style is specified.  This lists photos with names
+  underneath, for the width of the page.
