@@ -1,17 +1,11 @@
 ---
-layout: userpage
-photoinfo: alt text for the photo here
+layout: default
 ---
 
-###Research Interests
+CADETS is a project.
+It has some goals.
+These are some placeholder bullet points for goals:
 
- * Some interesting stuff
- * Some exciting stuff
-
-### Teaching responsibilities
-
- * Knowledge to the brains of humans
-
-### Other interests
-
- * Running up and down stairs
+* Do stuff
+* Do better stuff
+* Do really awesome stuff

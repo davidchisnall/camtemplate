@@ -1,31 +1,13 @@
 ---
 layout: default
 title: People
-published: false
 ---
 
 {% comment %}
-The people.html inclusion will list all of the people if no role is specified.  If you set the style to 'verbose' then it will put people one per line with description text alongside their photos, otherwise it will just show names and photos.
+Uncomment this if we want multiple categories of people.
+{% include contents.markdown %}
 {% endcomment %}
 
-{% include contents.markdown %}
+These are all of the people who have photos with the wrong aspect ratio.
 
-Principal Investigators (verbose format)
-----------------------------------------
-
-{% include people.html role='PI' style='verbose' %}
-
-Students (default format)
--------------------------
-
-{% include people.html role='PhD' %}
-
-Everyone (default format)
--------------------------
-
-{% include people.html %}
-
-Everyone (brief format)
------------------------
-
-{% include people.html style='brief' %}
+{% include people.html style='verbose' %}

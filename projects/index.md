@@ -3,4 +3,4 @@ title: Student projects
 layout: default
 ---
 
-I am interested in supervising projects that span languages / compilers, operating systems, and computer architecture.
+CADETS may produce some inspiration for good student projects, but hasn't yet.

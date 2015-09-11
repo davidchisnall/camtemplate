@@ -1,13 +1,9 @@
 # Site settings
-title: My Name
-author: My Name
-# This is the author that will be used for highlighting the author in
-# publication entries.
-pubauthor: My Name
-url: "http://www.cl.cam.ac.uk" 
-baseurl: /~crsid123
-createdyear: 2014
-destination: public_html
+title: CADETS
+url: "http://www.cl.cam.ac.uk/"
+baseurl: /research/security/cadets
+createdyear: 2015
+destination: cadets
 collections:
   projects:
     output: false
