@@ -16,9 +16,14 @@
   {% assign url = doi %}
 {% endif %}
 {% if url %}
-  {{ reference | replace: entry.title, "<a class='bibtitle' href='%%URL_PLACEHOLDER%%'>\0</a>" | replace: '%%URL_PLACEHOLDER%%', url | replace: site.pubauthor, "<span class='bibauthor'>\0</span>" }}
+{% capture cite %}{{ reference | replace: entry.title, "<a class='bibtitle' href='%%URL_PLACEHOLDER%%'>\0</a>" | replace: '%%URL_PLACEHOLDER%%', url }}{% endcapture %}
 {% else %}
-  {{ reference | replace: entry.title, "<span class='bibtitle'>\0</span>" | replace: site.pubauthor, "<span class='bibauthor'>\0</span>" }}
+{% capture cite %}{{ reference | replace: entry.title, "<span class='bibtitle'>\0</span>" }}{% endcapture %}
+{% endif %}
+{% if site.pubauthor %}
+{{ cite | replace: site.pubauthor, "<span class='bibauthor'>\0</span>" }}
+{% else %}
+{{ cite }}
 {% endif %}
 {% if entry.pdf %}
   {% assign pdf = entry.pdf %}
