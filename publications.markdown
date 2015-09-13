@@ -10,6 +10,12 @@ appear if the BibTeX file contains entries of the relevant type (everything
 that is not of type book is counted as an article, currently).
 {% endcomment %}
 
+
+CADETS is a new project that has not yet produced any publications.
+
+{% comment %}
+Uncomment this section when the sentence above is no longer true!
+
 {% include contents.markdown %}
 
 {% capture articles %}{% bibliography --query @article, @inproceedings %}{% endcapture %}
@@ -37,3 +43,13 @@ Tech Reports
 
 {{ techreports }}
 {% endif %}
+{% endcomment %}
+
+Prior work
+----------
+
+Prior work by members of the CADETS project that is of relevance includes:
+
+<div markdown='0'>
+{% bibliography --file bibliography --sort date %}
+</div>

@@ -1,0 +1,29 @@
+@article{Anderson2014a,
+ author = {Anderson, Jonathan and Watson, Robert N. M. and Chisnall, David and Gudka, Khilan and Marinos, Ilias and Davis, Brooks},
+ title = {TESLA: temporally enhanced system logic assertions},
+ booktitle = {EuroSys '14: Proceedings of the Ninth European Conference on Computer Systems},
+ year = {2014},
+ isbn = {978-1-4503-2704-6},
+ pages = {1--14},
+ location = {Amsterdam, The Netherlands},
+ doi = {http://doi.acm.org/10.1145/2592798.2592801},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ abstract = {
+    Large, complex, rapidly evolving pieces of software such as operating systems are notoriously difficult to prove correct. Developers instead describe expected behaviour through assertions and check actual behaviour through testing. However, many dynamic safety properties cannot be validated this way as they are temporal: they depend on events in the past or future and are not easily expressed in assertions.
+
+    TESLA is a description, analysis, and validation tool that allows systems programmers to describe expected temporal behaviour in low-level languages such as C. Temporal assertions can span the interfaces between libraries and even languages. TESLA exposes run-time behaviour using program instrumentation, illuminating coverage of complex state machines and detecting violations of specifications.
+
+    We apply TESLA to complex software, including an OpenSSL security API, the FreeBSD Mandatory Access Control framework, and GNUstep's rendering engine. With performance allowing "always-on" availability, we demonstrate that existing systems can benefit from richer dynamic analysis without being re-written for amenability to a complete formal analysis.
+   },
+ pdf = {http://www.cl.cam.ac.uk/research/security/ctsrd/pdfs/201406-isca2014-cheri.pdf}
+
+}
+@misc{Davis,
+author = {Davis, Brooks},
+mendeley-groups = {CADETS},
+title = {{CheriBSD: a research fork of FreeBSD}},
+howpublished = {https://www.bsdcan.org/2015/schedule/attachments/317\_BSDCan-CheriBSD.pdf},
+url = {https://www.bsdcan.org/2015/schedule/attachments/317\_BSDCan-CheriBSD.pdf},
+urldate = {2015-07-17}
+}
