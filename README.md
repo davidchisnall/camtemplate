@@ -87,7 +87,8 @@ Publication list
 The publication lists (both the complete publications page and the short
 summary on the user page) are generated from `_bibliography/publications.bib`.
 If you have set the `pubauthor` field in `_config.yml` then this name will be
-italicised in all publications.
+italicised in all publications.  For group web sites, `pubauthor` can be an
+array and all names will be italicised.
 
 The title will become a link if there is a `url`, `pdf`, or `doi` field in the
 BibTeX entry.  If there is an `abstract` field then the accompanying text will
