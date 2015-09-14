@@ -11,6 +11,8 @@ destination: public_html
 collections:
   projects:
     output: false
+  people:
+    output: false
 # Build settings
 markdown: kramdown
 kramdown: 
