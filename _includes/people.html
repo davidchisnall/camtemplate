@@ -1,5 +1,6 @@
 <div style="width=100% ; clear:both">
-{% if include.style == 'verbose' %}
+{% case include.style %}
+{% when 'verbose' %}
 {% for person in site.people %}
 {% if include.role == null or person.role == include.role %}
 <div style="clear: both">
@@ -14,8 +15,7 @@
 </div>
 {% endif %}
 {% endfor %}
-{% else %}
-{% if include.style == 'brief' %}
+{% when 'brief' %}
 <div style="colum-width: 15em ; column-count: 3; -webkit-column-count: 3; moz-column-count: 3;">
 <ul>
 {% for person in site.people %}
@@ -38,8 +38,7 @@
 </div>
 {% endif %}
 {% endfor %}
-{% endif %}
-{% endif %}
+{% endcase %}
 </div>
 <div style="clear: both; width=100%">
 <hr />
