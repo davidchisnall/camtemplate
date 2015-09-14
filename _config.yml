@@ -2,6 +2,7 @@
 title: CADETS
 url: "http://www.cl.cam.ac.uk/"
 baseurl: /research/security/cadets
+pubauthor: [ 'Robert N. M. Watson', 'Jonathan Anderson', 'Arun Thomas', 'David Chisnall' ]
 createdyear: 2015
 destination: cadets
 collections:
