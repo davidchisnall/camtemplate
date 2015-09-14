@@ -20,11 +20,10 @@
 {% else %}
 {% capture cite %}{{ reference | replace: entry.title, "<span class='bibtitle'>\0</span>" }}{% endcapture %}
 {% endif %}
-{% if site.pubauthor %}
-{{ cite | replace: site.pubauthor, "<span class='bibauthor'>\0</span>" }}
-{% else %}
+{% for author in site.pubauthor %}
+{%capture cite %}{{ cite | replace: author, "<span class='bibauthor'>\0</span>" }}{% endcapture %}
+{% endfor %}
 {{ cite }}
-{% endif %}
 {% if entry.pdf %}
   {% assign pdf = entry.pdf %}
 {% elsif entry.url %}
