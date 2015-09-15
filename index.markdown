@@ -5,11 +5,12 @@ photoinfo: Photo by Will Harwood
 
 ###Research Interests
 
+ * Cross-language interoperability
+ * Architectures for modern programming languages
  * Dynamic Object Oriented Programming Languages
  * Domain and Problem Specific Languages
  * Compiler design
  * Optimising 'slow' programming languages
- * Architectures for modern programming languages
 
 ### Teaching responsibilities
 
