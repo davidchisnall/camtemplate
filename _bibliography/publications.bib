@@ -1,3 +1,14 @@
+@inproceedings{gudka2015soaap,
+  title = {Clean Application Compartmentalization with SOAAP},
+  author = {Khilan Gudka and Robert N.M. Watson and Jonathan Anderson and David Chisnall and Brooks Davis and Ben Laurie and Ilias Marinos and Peter G. Neumann and Alex Richardson},
+  booktitle = {Proceedings of the 22nd ACM Conference on Computer and Communications Security},
+  year = 2015,
+  month = October,
+  address = {Denver, CO, USA},
+  pdf = {http://www.cl.cam.ac.uk/research/security/ctsrd/pdfs/2015ccs-soaap.pdf},
+  abstract = {  Application compartmentalization, a vulnerability mitigation technique employed in programs such as OpenSSH and the Chromium web browser, decomposes software into isolated components to limit privileges leaked or otherwise available to attackers.  However, compartmentalizing applications -- and maintaining that compartmentalization -- is hindered by ad hoc methodologies and significantly increased programming effort.  In practice, programmers stumble through (rather than overtly reason about) compartmentalization spaces of possible decompositions, unknowingly trading off correctness, security, complexity, and performance.  We present a new conceptual framework embodied in an LLVM-based tool: the Security-Oriented Analysis of Application Programs (SOAAP) that allows programmers to reason about compartmentalization using source-code annotations (compartmentalization hypotheses). We demonstrate considerable benefit when creating new compartmentalizations for complex applications, and analyze existing compartmentalized applications to discover design faults and maintenance issues arising from application evolution.}
+}
+
 @inproceedings{watson2015cheri,
 	title={Cheri: A hybrid capability-system architecture for scalable software compartmentalization},
 	author={Watson, Robert N. M. and Woodruff, Jonathan and Neumann, Peter G and Moore, Simon W. and Anderson, Jonathan and Chisnall, David and Dave, Nirav and Davis, Brooks and Gudka, Khilan and Laurie, Ben and others},
@@ -386,3 +397,4 @@ This report describes the CHERI architecture and design, and provides reference 
 
 		This paper presents a metaobject protocol flexible enough to implement Objective-C and other languages of interest. It also presents an implementation of this model in the form of a new Objective-C runtime library which supports all of the new features of Objective-C 2.0 as well as safe inline caching, mixins, prototype-based object orientation, transparent support for other languages---including those with a prototype-based object model---and a small, maintainable code base.}
 }
+
