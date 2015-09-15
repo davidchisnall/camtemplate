@@ -1,6 +1,8 @@
 ---
 ---
 {% assign doi = null %}
+{% assign url = null %}
+{% assign pdf = null %}
 {% if entry.doi %}
   {% if entry.doi contains '://' %}
     {% assign doi = entry.doi %}
