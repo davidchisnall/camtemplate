@@ -5,7 +5,7 @@ published: false
 Jekyll template for University of Cambridge Computer Laboratory web pages
 =========================================================================
 
-This is a (Jekyll)[http://jekyllrb.com] template that is intended to mimic the
+This is a [Jekyll](http://jekyllrb.com) template that is intended to mimic the
 functionality an appearance of the ucampas system, with a few helpful
 extensions.  It is not officially supported by the University or the Computer
 Lab.
@@ -23,7 +23,7 @@ dependencies (on a system with Ruby installed) with this command:
 30-second introduction to Jekyll
 --------------------------------
 
-This template uses (Jekyll)[http://jekyllrb.com], so using it requires a little bit of understanding of Jekyll.
+This template uses [Jekyll](http://jekyllrb.com), so using it requires a little bit of understanding of Jekyll.
 Jekyll can run a local web server that will automatically update the generated pages based on changes to the source:
 
 	$ jekyll serve
@@ -33,7 +33,7 @@ Once the site is ready for publication, run:
 
 	$ jekyll build
 
-Note that if you are deploying to (GitHub Pages)[https://pages.github.com] and *not* using any of the Jekyll Scholar (BibTeX) functionality, then you can skip this step and just `git push`.
+Note that if you are deploying to [GitHub Pages](https://pages.github.com) and *not* using any of the Jekyll Scholar (BibTeX) functionality, then you can skip this step and just `git push`.
 
 Beyond this simple usage, it's important to understand a few things about how Jekyll works:
 
@@ -41,8 +41,8 @@ Beyond this simple usage, it's important to understand a few things about how Je
  - Files that do *not* start with an underscore will be pushed to the site, after preprocessing (if applicable).
  - Files that are preprocessed should start with a frontmatter section.  This is a yaml dictionary inside a block delimited by `---`.  See the top of this file for a simple example.
  - Files in Jekyll that are preprocessed are typically constructed in two stages:
-    1. (Liquid){https://github.com/Shopify/liquid/wiki/Liquid-for-Designers} templates are instantiated, to construct a single page from multiple sources.
-    2. As files are included, markup (typically the (kramdown)[http://kramdown.gettalong.org] dialect of (Markdown)[http://daringfireball.net/projects/markdown/]) is translated into HTML.
+    1. [Liquid](https://github.com/Shopify/liquid/wiki/Liquid-for-Designers) templates are instantiated, to construct a single page from multiple sources.
+    2. As files are included, markup (typically the [kramdown](http://kramdown.gettalong.org) dialect of [Markdown](http://daringfireball.net/projects/markdown/]) is translated into HTML.
 
 To give a concrete example, if you are using this template to generate a personal web page, you will use something based on `index.markdown` file as your front page.
 This has frontmatter saying `layout: userpage`, so Jekyll will start producing an `index.html` using the contents of `_layouts/userpage.html`, with the contents of `index.markdown` (now translated into HTML) as its `contents` property.
