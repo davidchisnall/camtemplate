@@ -13,7 +13,7 @@ Lab.
 Dependencies
 ------------
 
-This template requires (Jekyll Scholar)[https://github.com/inukshuk/jekyll-scholar],
+This template requires [Jekyll Scholar](https://github.com/inukshuk/jekyll-scholar),
 in addition to Jekyll.  This is used to format the publications lists.  As
 Jekyll Scholar depends on Jekyll, you should be able to install all
 dependencies (on a system with Ruby installed) with this command:
