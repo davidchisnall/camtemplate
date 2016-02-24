@@ -4,7 +4,7 @@ author: David Chisnall
 # This is the author that will be used for highlighting the author in
 # publication entries.
 pubauthor: David Chisnall
-url: "http://www.cl.cam.ac.uk" 
+url: "//www.cl.cam.ac.uk" 
 baseurl: /~dc552
 createdyear: 2004
 destination: public_html
