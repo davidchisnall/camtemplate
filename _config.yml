@@ -4,7 +4,7 @@ author: My Name
 # This is the author that will be used for highlighting the author in
 # publication entries.
 pubauthor: My Name
-url: "http://www.cl.cam.ac.uk" 
+url: "//www.cl.cam.ac.uk" 
 baseurl: /~crsid123
 createdyear: 2014
 destination: public_html
