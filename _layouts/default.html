@@ -29,7 +29,7 @@
           </div>
         </div>
         {% endunless %}
-        <h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
+        <h1 id="mainheading">{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
         <hr />
 
         {{ content }}
