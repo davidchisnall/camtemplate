@@ -73,6 +73,11 @@ div.Photo
 	{
 		min-width: 0;
 	}
+	/* Hide the search box on tiny screens. */
+	div#site-search
+	{
+		display: none
+	}
 }
 /* Override some more things in the site style sheet so that we don't look
  * horrible on mobile screens */
