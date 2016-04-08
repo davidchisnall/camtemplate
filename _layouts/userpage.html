@@ -4,10 +4,8 @@ layout: default
 
 <div class="wrapper">
 <div class="Photo">
-  <div class="Shadow">
-    <div class="PhotoFrame">
-      <img src="photo.jpg" {% if page.photoinfo %}alt="{{page.photoinfo}}"{% endif %} class="Photo" />
-    </div>
+  <div class="PhotoFrame">
+    <img src="photo.jpg" {% if page.photoinfo %}alt="{{page.photoinfo}}"{% endif %} class="Photo shadow" />
   </div>
   <div class="contact">
   <table>
