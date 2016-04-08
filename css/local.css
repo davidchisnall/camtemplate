@@ -40,6 +40,20 @@ div.Photo
 		padding-left: 0 !important;
 	}
 }
+@media all and (min-width: 450px)
+{
+	img.Photo
+	{
+		max-width: 300px
+	}
+}
+@media all and (max-width: 450px)
+{
+	img.Photo
+	{
+		max-width: 90%
+	}
+}
 @media all and (max-width: 820px)
 {
 	/* Override some things in the site style sheet for very small screens */
@@ -80,7 +94,6 @@ img.Photo
 	border: solid;
 	border-width: thin;
 	border-color: black;
-	max-width: 300px
 }
 h2.PersonInfo
 {
