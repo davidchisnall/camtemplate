@@ -1,7 +1,7 @@
 <ul id="nav-primary">
   <li {% if page.url == '/index.html' %}class="active"{% endif %}>
     <div>
-      <a href="{{ site.baseurl }}/">{{ site.title }}</a>
+      <a href="{{ site.baseurl }}/#mainheading">{{ site.title }}</a>
     </div>
   </li>
   {% if site.data.contents == undefined %}
@@ -18,7 +18,7 @@
         {% if section.title %}
   <li {% if section.title == page.title %}class="active"{% endif %} >
   <div>
-    <a href="{{ site.baseurl }}{{ section.url }}">{{ section.title }}</a>
+    <a href="{{ site.baseurl }}{{ section.url }}#mainheading">{{ section.title }}</a>
   </div>
           {% if section.dir != '/' and sectiondir == pagedir %}
     <ul>
@@ -27,7 +27,7 @@
                 {% if subsection.dir == pagedir %}
       <li {% if subsection.title == page.title %}class="active"{% endif %} >
         <div>
-          <a href="{{ site.baseurl }}{{ subsection.url }}">{{ subsection.title }}</a>
+          <a href="{{ site.baseurl }}{{ subsection.url }}#mainheading">{{ subsection.title }}</a>
         </div>
       </li>
                 {% endif %}
@@ -44,7 +44,7 @@
       {% if section.location contains 'http' %}
         {% assign url = section.location %}
       {% else %}
-        {% capture url %}{{ site.url }}/{{ section.location }}{% endcapture %}
+        {% capture url %}{{ site.url }}/{{ section.location }}#mainheading{% endcapture %}
       {% endif %}
   <li {% if section.title == page.title %}class="active"{% endif %} >
   <div>
@@ -59,7 +59,7 @@
               {% if subsection.location contains 'http' %}
                 {% assign suburl = subsection.location %}
               {% else %}
-                {% capture suburl %}{{ url }}{{ subsection.location }}{% endcapture %}
+                {% capture suburl %}{{ url }}{{ subsection.location }}#mainheading{% endcapture %}
               {% endif %}
             {% else %}
               {% for s in site.pages %}
