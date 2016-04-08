@@ -69,6 +69,10 @@ div.Photo
 		float: none !important;
 		width: 100% !important
 	}
+	div#dept-title
+	{
+		min-width: 0;
+	}
 }
 /* Override some more things in the site style sheet so that we don't look
  * horrible on mobile screens */
