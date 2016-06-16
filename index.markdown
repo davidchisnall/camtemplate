@@ -3,7 +3,7 @@ layout: userpage
 photoinfo: Photo by Will Harwood
 ---
 
-###Research Interests
+### Research Interests
 
  * Cross-language interoperability
  * Architectures for modern programming languages
@@ -17,7 +17,7 @@ photoinfo: Photo by Will Harwood
  * [L25: Modern Compiler Design](http://www.cl.cam.ac.uk/teaching/current/L25/)
  * Computer Science Director of Studies for [Murray Edwards College](http://www.murrayedwards.cam.ac.uk)
 
-###Open source work
+### Open source work
 
  * [FreeBSD](http://www.FreeBSD.org/) (Core Team member)
  * [Étoilé](http://etoileos.org/) (Core Team member)
@@ -25,7 +25,7 @@ photoinfo: Photo by Will Harwood
  * [LLVM, Clang, and libc++](http://llvm.org/) (Contributor)
  * [libcxxrt](https://github.com/pathscale/libcxxrt/) (Author / maintainer)
 
-### Other interests
+### Other interests
 
  * Argentine tango, Cuban salsa
  * Ultimate frisbee
