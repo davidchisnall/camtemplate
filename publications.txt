@@ -1,0 +1,6 @@
+---
+layout: 
+permalink: publications.bib
+---
+{% capture bib %}{% bibliography --template {{entry.bibtex}} %}{% endcapture %}
+{{ bib | strip_html }}
