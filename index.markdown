@@ -3,7 +3,7 @@ layout: userpage
 photoinfo: alt text for the photo here
 ---
 
-###Research Interests
+### Research Interests
 
  * Some interesting stuff
  * Some exciting stuff
