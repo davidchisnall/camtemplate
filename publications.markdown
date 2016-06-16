@@ -10,6 +10,8 @@ appear if the BibTeX file contains entries of the relevant type (everything
 that is not of type book is counted as an article, currently).
 {% endcomment %}
 
+[Download a complete list of publications as BibTeX](publications.bib)
+
 {% include contents.markdown %}
 
 {% capture articles %}{% bibliography --query @article, @inproceedings %}{% endcapture %}
