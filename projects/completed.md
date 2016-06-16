@@ -6,7 +6,7 @@ layout: default
 {% capture done %}
 {% for project in site.projects %}
 {% if project.done %}
-###{{ project.title }} ({% if project.type == 2 %}Part II{% else %}MPhil{% endif %} project)
+### {{ project.title }} ({% if project.type == 2 %}Part II{% else %}MPhil{% endif %} project)
 <p><b>Prerequisites:</b> {{ project.prerequisites}}</p>
 {% if project.outcome %}
 <p><b>Outcome:</b> {{ project.outcome}}</p>
