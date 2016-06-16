@@ -8,9 +8,14 @@
     {% comment %}
      The following lines work around the fact that, in recent versions of
      Jekyll, section.dir does not end with a /, but page.dir does.
+
+     This was a regression in some versions of Jekyll, but one that is now
+     fixed.  Unfortunately, we still have to support both the broken and
+     non-broken versions.
     {% endcomment %}
     {% capture pagedirarray %}{{ page.dir | split: "/"}}{% endcapture %}
     {% capture pagedir %}{% for path in pagedirarray %}{% if path != "" %}/{{path}}{% endif %}{% endfor %}{% endcapture %}
+    {% capture pagedir_slash %}{{ pagedir }}/{% endcapture %}
     {% for section in site.pages %}
       {% capture sectiondirarray %}{{ section.dir | split: "/"}}{% endcapture %}
       {% capture sectiondir %}{% for path in sectiondirarray %}{% if path != "" %}/{{path}}{% endif %}{% endfor %}{% endcapture %}
@@ -24,7 +29,7 @@
     <ul>
             {% for subsection in site.pages %}
               {% unless subsection.name contains 'index.' %} 
-                {% if subsection.dir == pagedir %}
+                {% if subsection.dir == pagedir or subsection.dir == page.dir %}
       <li {% if subsection.title == page.title %}class="active"{% endif %} >
         <div>
           <a href="{{ site.baseurl }}{{ subsection.url }}#mainheading">{{ subsection.title }}</a>
