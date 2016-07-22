@@ -28,11 +28,16 @@
   abstract = {  Application compartmentalization, a vulnerability mitigation technique employed in programs such as OpenSSH and the Chromium web browser, decomposes software into isolated components to limit privileges leaked or otherwise available to attackers.  However, compartmentalizing applications -- and maintaining that compartmentalization -- is hindered by ad hoc methodologies and significantly increased programming effort.  In practice, programmers stumble through (rather than overtly reason about) compartmentalization spaces of possible decompositions, unknowingly trading off correctness, security, complexity, and performance.  We present a new conceptual framework embodied in an LLVM-based tool: the Security-Oriented Analysis of Application Programs (SOAAP) that allows programmers to reason about compartmentalization using source-code annotations (compartmentalization hypotheses). We demonstrate considerable benefit when creating new compartmentalizations for complex applications, and analyze existing compartmentalized applications to discover design faults and maintenance issues arising from application evolution.}
 }
 
-@inproceedings{watson2015cheri,
-	title={Cheri: A hybrid capability-system architecture for scalable software compartmentalization},
-	author={Watson, Robert N. M. and Woodruff, Jonathan and Neumann, Peter G and Moore, Simon W. and Anderson, Jonathan and Chisnall, David and Dave, Nirav and Davis, Brooks and Gudka, Khilan and Laurie, Ben and others},
-	booktitle={Proceedings of the IEEE Symposium on Security and Privacy},
-	year={2015},
+@INPROCEEDINGS{7163016, 
+	author={R. N. M. Watson and J. Woodruff and P. G. Neumann and S. W. Moore and J. Anderson and D. Chisnall and N. Dave and B. Davis and K. Gudka and B. Laurie and S. J. Murdoch and R. Norton and M. Roe and S. Son and M. Vadera}, 
+	booktitle={2015 IEEE Symposium on Security and Privacy}, 
+	title={CHERI: A Hybrid Capability-System Architecture for Scalable Software Compartmentalization}, 
+	year={2015}, 
+	pages={20-37}, 
+	keywords={data protection;operating systems (computers);program compilers;reduced instruction set computing;software architecture;C-language TCB;CHERI;LLVM compiler;RISC instruction-set architecture;capability-based memory protection;hardware-software object-capability model;hybrid capability-system architecture;operating system;software compartmentalization;Hardware;Kernel;Libraries;Reduced instruction set computing;Registers;Security;CHERI processor;capability system;computer architecture;memory protection;object capabilities;software compartmentalization}, 
+	doi={10.1109/SP.2015.9}, 
+	ISSN={1081-6011}, 
+	month={May},
 	pdf = {papers/201505-oakland2015-cheri-compartmentalization.pdf},
 	abstract = {CHERI is a hardware-software architecture that combines a capability-system security model with design choices from contemporary processors, Instruction-Set Architectures (ISAs), compilers, and operating systems. At the lowest level, CHERI's fine-grained, in-address-space memory protection mitigates many widely used exploit techniques. However, CHERI's ISA-level capability model can also act as the foundation for a software object-capability model suitable for incremental deployment in compartmentalizing C-language applications to mitigate attacks. Prototyped as an extension to the 64-bit FPGA BERI RISC soft-core processor, FreeBSD operating system, and Clang/LLVM compiler suite, we demonstrate substantial improvements to security, programmability, and scalability as compared to compartmentalization based on pure Memory-Management Unit (MMU) designs. We evaluate CHERI using several real-world UNIX libraries and applications.}
 }
