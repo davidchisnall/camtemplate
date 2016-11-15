@@ -18,6 +18,7 @@ markdown: kramdown
 kramdown: 
   toc_levels: "2,3" 
 scholar:
+  use_raw_bibtex_entry: false
   bibliography_template: bib
   style: ./_bibliography/cl-pubs
   bibliography: publications.bib
