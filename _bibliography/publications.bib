@@ -44,6 +44,29 @@
   keywords = {C},
 }
 
+@TechReport{UCAM-CL-TR-891,
+  author =	 {Watson, Robert N. M. and Neumann, Peter G. and Woodruff,
+          	  Jonathan and Roe, Michael and Anderson, Jonathan and
+          	  Chisnall, David and Davis, Brooks and Joannou, Alexandre
+          	  and Laurie, Ben and Moore, Simon W. and Murdoch, Steven J.
+          	  and Norton, Robert and Son, Stacey and Xia, Hongyan},
+  title = 	 {{Capability Hardware Enhanced RISC Instructions: CHERI
+         	   Instruction-Set Architecture (Version 5)}},
+  year = 	 2016,
+  month = 	 jun,
+  url = 	 {http://www.cl.cam.ac.uk/techreports/UCAM-CL-TR-891.pdf},
+  institution =  {University of Cambridge, Computer Laboratory},
+  number = 	 {UCAM-CL-TR-891},
+  abstract = {This technical report describes CHERI ISAv5, the fifth version of the Capability Hardware Enhanced RISC Instructions (CHERI) Instruction-Set Architecture (ISA) being developed by SRI International and the University of Cambridge. This design captures six years of research, development, refinement, formal analysis, and testing, and is a substantial enhancement to the ISA versions described in earlier technical reports. This version introduces the CHERI-128 “compressed” capability format, adds further capability instructions to improve code generation, and rationalizes a number of ISA design choices (such as system permissions) as we have come to better understand mappings from C programming-language and MMU-based operating-system models into CHERI. It also contains improvements to descriptions, explanations, and rationale.
+
+The CHERI instruction set is based on a hybrid capability-system architecture that adds new capability-system primitives to a commodity 64-bit RISC ISA enabling software to efficiently implement fine-grained memory protection and a hardware-software object-capability security model. These extensions support incrementally adoptable, high-performance, formally based, programmer-friendly underpinnings for fine-grained software decomposition and compartmentalization, motivated by and capable of enforcing the principle of least privilege. Fine-grained memory protection also provides direct mitigation of many widely deployed exploit techniques.
+
+The CHERI system architecture purposefully addresses known performance and robustness gaps in commodity ISAs that hinder the adoption of more secure programming models centered around the principle of least privilege. To this end, CHERI blends traditional paged virtual memory with a per-address-space capability model that includes capability registers, capability instructions, and tagged memory that have been added to the 64-bit MIPS ISA. CHERI learns from the C-language fat-pointer literature: its capabilities describe fine-grained regions of memory and can be substituted for data or code pointers in generated code, protecting data and also providing Control-Flow Integrity (CFI). Strong monotonicity properties allow the CHERI capability model to express a variety of protection properties, from valid C-language pointer provenance and C-language bounds checking to implementing the isolation and controlled communication structures required for compartmentalization.
+
+CHERI's hybrid system approach, inspired by the Capsicum security model, allows incremental adoption of capability-oriented software design: software implementations that are more robust and resilient can be deployed where they are most needed, while leaving less critical software largely unmodified, but nevertheless suitably constrained to be incapable of having adverse effects. For example, we are focusing conversion efforts on low-level TCB components of the system: separation kernels, hypervisors, operating-system kernels, language runtimes, and userspace TCBs such as web browsers. Likewise, we see early-use scenarios (such as data compression, protocol parsing, image processing, and video processing) that relate to particularly high-risk software libraries, which are concentrations of both complex and historically vulnerability-prone code combined with untrustworthy data sources, while leaving containing applications unchanged.}
+}
+
+
 
 @inproceedings{gudka2015soaap,
   title = {Clean Application Compartmentalization with SOAAP},
@@ -55,6 +78,29 @@
   pdf = {http://www.cl.cam.ac.uk/research/security/ctsrd/pdfs/2015ccs-soaap.pdf},
   abstract = {  Application compartmentalization, a vulnerability mitigation technique employed in programs such as OpenSSH and the Chromium web browser, decomposes software into isolated components to limit privileges leaked or otherwise available to attackers.  However, compartmentalizing applications -- and maintaining that compartmentalization -- is hindered by ad hoc methodologies and significantly increased programming effort.  In practice, programmers stumble through (rather than overtly reason about) compartmentalization spaces of possible decompositions, unknowingly trading off correctness, security, complexity, and performance.  We present a new conceptual framework embodied in an LLVM-based tool: the Security-Oriented Analysis of Application Programs (SOAAP) that allows programmers to reason about compartmentalization using source-code annotations (compartmentalization hypotheses). We demonstrate considerable benefit when creating new compartmentalizations for complex applications, and analyze existing compartmentalized applications to discover design faults and maintenance issues arising from application evolution.}
 }
+
+@TechReport{UCAM-CL-TR-877,
+  author =	 {Watson, Robert N. M. and Chisnall, David and Davis, Brooks
+          	  and Koszek, Wojciech and Moore, Simon W. and Murdoch,
+          	  Steven J. and Neumann, Peter G. and Woodruff, Jonathan},
+  title = 	 {{Capability Hardware Enhanced RISC Instructions: CHERI
+         	   Programmer's Guide}},
+  year = 	 2015,
+  month = 	 sep,
+  url = 	 {http://www.cl.cam.ac.uk/techreports/UCAM-CL-TR-877.pdf},
+  institution =  {University of Cambridge, Computer Laboratory},
+  number = 	 {UCAM-CL-TR-877},
+  abstract = {This work presents CHERI, a practical extension of the 64-bit MIPS instruction set to support capabilities for fine-grained memory protection.
+
+Traditional paged memory protection has proved inadequate in the face of escalating security threats and proposed solutions include fine-grained protection tables (Mondrian Memory Protection) and hardware fat-pointer protection (Hardbound). These have emphasised transparent protection for C executables but have lacked flexibility and practicality. Intel’s recent memory protection extensions (iMPX) attempt to adopt some of these ideas and are flexible and optional but lack the strict correctness of these proposals.
+
+Capability addressing has been the classical solution to efficient and strong memory protection but it has been thought to be incompatible with common instruction sets and also with modern program structure which uses a flat memory space with global pointers.
+
+CHERI is a fusion of capabilities with a paged flat memory producing a program-managed fat pointer capability model. This protection mechanism scales from application sandboxing to efficient byte-level memory safety with per-pointer permissions. I present an extension to the 64-bit MIPS architecture on FPGA that runs standard FreeBSD and supports self-segmenting applications in user space.
+
+Unlike other recent proposals, the CHERI implementation is open-source and of sufficient quality to support software development as well as community extension of this work. I compare with published memory safety mechanisms and demonstrate competitive performance while providing assurance and greater flexibility with simpler hardware requirements.}
+}
+
 
 @INPROCEEDINGS{7163016, 
 	author={R. N. M. Watson and J. Woodruff and P. G. Neumann and S. W. Moore and J. Anderson and D. Chisnall and N. Dave and B. Davis and K. Gudka and B. Laurie and S. J. Murdoch and R. Norton and M. Roe and S. Son and M. Vadera}, 
@@ -70,6 +116,19 @@
 	abstract = {CHERI is a hardware-software architecture that combines a capability-system security model with design choices from contemporary processors, Instruction-Set Architectures (ISAs), compilers, and operating systems. At the lowest level, CHERI's fine-grained, in-address-space memory protection mitigates many widely used exploit techniques. However, CHERI's ISA-level capability model can also act as the foundation for a software object-capability model suitable for incremental deployment in compartmentalizing C-language applications to mitigate attacks. Prototyped as an extension to the 64-bit FPGA BERI RISC soft-core processor, FreeBSD operating system, and Clang/LLVM compiler suite, we demonstrate substantial improvements to security, programmability, and scalability as compared to compartmentalization based on pure Memory-Management Unit (MMU) designs. We evaluate CHERI using several real-world UNIX libraries and applications.}
 }
 
+@TechReport{UCAM-CL-TR-869,
+  author =	 {Watson, Robert N. M. and Chisnall, David and Davis, Brooks
+          	  and Koszek, Wojciech and Moore, Simon W. and Murdoch,
+          	  Steven J. and Neumann, Peter G. and Woodruff, Jonathan},
+  title = 	 {{Bluespec Extensible RISC Implementation: BERI Software
+         	   reference}},
+  year = 	 2015,
+  month = 	 apr,
+  url = 	 {http://www.cl.cam.ac.uk/techreports/UCAM-CL-TR-869.pdf},
+  institution = {University of Cambridge, Computer Laboratory},
+  number = 	 {UCAM-CL-TR-869},
+  abstract = {The BERI Software Reference documents how to build and use the FreeBSD operating system on the Bluespec Extensible RISC Implementation (BERI) developed by SRI International and the University of Cambridge. The reference is targeted at hardware and software programmers who will work with BERI or BERI-derived systems.}
+}
 
 @TechReport{UCAM-CL-TR-864,
   author =	 {Watson, Robert N. M. and Neumann, Peter G. and Woodruff,
