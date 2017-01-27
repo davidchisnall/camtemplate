@@ -1,6 +1,6 @@
 
 @inproceedings{cherijniplaceholder,
-  author = {David Chisnall and  Brooks Davis and  Khilan Gudka and  Alexandre Joannou and  Robert N. M. Watson and  David Brazdil and  Jonathan Woodruff and  A. Theodore Markettos and  J. Edward Maste and  Robert Norton and  Stacey Son and  Michael Roe and  Simon W. Moore and  Peter G. Neumann and Ben Laurie},
+  author = {David Chisnall and  Brooks Davis and  Khilan Gudka  and  David Brazdil and  Alexandre Joannouand  Jonathan Woodruff and  A. Theodore Markettos and  J. Edward Maste and  Robert Norton and  Stacey Son and  Michael Roe and  Simon W. Moore and  Peter G. Neumann and Ben Laurie and  Robert N. M. Watson},
   title = {CHERI JNI: Sinking the Java security model into the {C} (to appear)},
   booktitle = {Proceedings of the Twenty Second International Conference on Architectural Support for Programming Languages and Operating Systems},
   series = {ASPLOS '17},
@@ -8,7 +8,14 @@
   location = {Xi'an, China},
   publisher = {ACM},
   address = {New York, NY, USA},
-  keywords = {Java language, C language, bounds checking, capabilities, compilers, memory protection, memory safety, processor design, security}
+  keywords = {Java language, C language, bounds checking, capabilities, compilers, memory protection, memory safety, processor design, security},
+  abstract = {Java provides security and robustness by building a high-level security model atop the foundation of memory protection. Unfortunately, any native code linked into a Java program -- including the million lines used to implement the standard library -- is able to bypass both the memory protection and the higher-level policies. We present a hardware-assisted implementation of the Java native code interface, which extends the guarantees required for Java's security model to native code. 
+
+		  Our design supports safe direct access to buffers owned by the JVM, including hardware-enforced read-only access where appropriate. We also present Java language syntax to declaratively describe isolated compartments for native code. 
+
+		  We show that it is possible to preserve the memory safety and isolation requirements of the Java security model in C code, allowing native code to run in the same process as Java code with the same impact on security as running equivalent Java code. Our approach has a negligible impact on performance, compared with the existing unsafe native code interface. We demonstrate a prototype implementation running on the CHERI microprocessor synthesized in FPGA. 
+  },
+  pdf = {https://www.openaccess.cam.ac.uk/publications/cam/m1-dP256bX}
 } 
 
 @ARTICLE{7723791, 
