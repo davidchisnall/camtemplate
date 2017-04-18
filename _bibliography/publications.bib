@@ -1,13 +1,17 @@
 
 @inproceedings{cherijniplaceholder,
   author = {David Chisnall and  Brooks Davis and  Khilan Gudka  and  David Brazdil and  Alexandre Joannouand  Jonathan Woodruff and  A. Theodore Markettos and  J. Edward Maste and  Robert Norton and  Stacey Son and  Michael Roe and  Simon W. Moore and  Peter G. Neumann and Ben Laurie and  Robert N. M. Watson},
-  title = {CHERI JNI: Sinking the Java security model into the {C} (to appear)},
+  title = {{CHERI JNI}: Sinking the Java security model into the {C}},
   booktitle = {Proceedings of the Twenty Second International Conference on Architectural Support for Programming Languages and Operating Systems},
   series = {ASPLOS '17},
   year = {2017},
   location = {Xi'an, China},
   publisher = {ACM},
   address = {New York, NY, USA},
+  acmid = {3037725},
+  pages = {569--583},
+  numpages = {15},
+  isbn = {978-1-4503-4465-4},
   keywords = {Java language, C language, bounds checking, capabilities, compilers, memory protection, memory safety, processor design, security},
   abstract = {Java provides security and robustness by building a high-level security model atop the foundation of memory protection. Unfortunately, any native code linked into a Java program -- including the million lines used to implement the standard library -- is able to bypass both the memory protection and the higher-level policies. We present a hardware-assisted implementation of the Java native code interface, which extends the guarantees required for Java's security model to native code. 
 
@@ -16,6 +20,8 @@
 		  We show that it is possible to preserve the memory safety and isolation requirements of the Java security model in C code, allowing native code to run in the same process as Java code with the same impact on security as running equivalent Java code. Our approach has a negligible impact on performance, compared with the existing unsafe native code interface. We demonstrate a prototype implementation running on the CHERI microprocessor synthesized in FPGA. 
   },
   pdf = {http://dl.acm.org/authorize?N24950}
+  url = {http://doi.acm.org/10.1145/3037697.3037725},
+  doi = {10.1145/3037697.3037725},
 } 
 
 @ARTICLE{7723791, 
