@@ -11,6 +11,8 @@ photoinfo: Photo by Will Harwood
  * Domain and Problem Specific Languages
  * Compiler design
  * Optimising 'slow' programming languages
+ * High-performance garbage collection
+ * Safety in unsafe languages
 
 ### Teaching responsibilities
 
@@ -19,8 +21,8 @@ photoinfo: Photo by Will Harwood
 
 ### Open source work
 
- * [FreeBSD](http://www.FreeBSD.org/) (Core Team member)
- * [Étoilé](http://etoileos.org/) (Core Team member)
+ * [FreeBSD](http://www.FreeBSD.org/) (Former Core Team member)
+ * [Étoilé](http://etoileos.org/) (Former Core Team member)
  * [GNUstep](http://gnustep.org/) (Contributor, author / maintainer of the Objective-C runtime)
  * [LLVM, Clang, and libc++](http://llvm.org/) (Contributor)
  * [libcxxrt](https://github.com/pathscale/libcxxrt/) (Author / maintainer)
