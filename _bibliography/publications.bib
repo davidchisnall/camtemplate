@@ -23,6 +23,21 @@ abstract={
 
 }
 
+@TechReport{UCAM-CL-TR-907,
+  author =	 {Watson, Robert N. M. and Neumann, Peter G. and Woodruff,
+          	  Jonathan and Roe, Michael and Anderson, Jonathan and
+          	  Baldwin, John and Chisnall, David and Davis, Brooks and
+          	  Joannou, Alexandre and Laurie, Ben and Moore, Simon W. and
+          	  Murdoch, Steven J. and Norton, Robert and Son, Stacey and
+          	  Xia, Hongyan},
+  title = 	 {{Capability Hardware Enhanced RISC Instructions: CHERI
+         	   Instruction-Set Architecture (Version 6)}},
+  year = 	 2017,
+  month = 	 apr,
+  url = 	 {http://www.cl.cam.ac.uk/techreports/UCAM-CL-TR-907.pdf},
+  institution =  {University of Cambridge, Computer Laboratory},
+  number = 	 {UCAM-CL-TR-907}
+}
 
 @inproceedings{cherijni,
   author = {David Chisnall and  Brooks Davis and  Khilan Gudka  and  David Brazdil and  Alexandre Joannouand  Jonathan Woodruff and  A. Theodore Markettos and  J. Edward Maste and  Robert Norton and  Stacey Son and  Michael Roe and  Simon W. Moore and  Peter G. Neumann and Ben Laurie and  Robert N. M. Watson},
@@ -82,6 +97,7 @@ abstract={
   keywords = {C},
 }
 
+
 @TechReport{UCAM-CL-TR-891,
   author =	 {Watson, Robert N. M. and Neumann, Peter G. and Woodruff,
           	  Jonathan and Roe, Michael and Anderson, Jonathan and
@@ -116,6 +132,22 @@ CHERI's hybrid system approach, inspired by the Capsicum security model, allows 
   pdf = {http://www.cl.cam.ac.uk/research/security/ctsrd/pdfs/2015ccs-soaap.pdf},
   abstract = {  Application compartmentalization, a vulnerability mitigation technique employed in programs such as OpenSSH and the Chromium web browser, decomposes software into isolated components to limit privileges leaked or otherwise available to attackers.  However, compartmentalizing applications -- and maintaining that compartmentalization -- is hindered by ad hoc methodologies and significantly increased programming effort.  In practice, programmers stumble through (rather than overtly reason about) compartmentalization spaces of possible decompositions, unknowingly trading off correctness, security, complexity, and performance.  We present a new conceptual framework embodied in an LLVM-based tool: the Security-Oriented Analysis of Application Programs (SOAAP) that allows programmers to reason about compartmentalization using source-code annotations (compartmentalization hypotheses). We demonstrate considerable benefit when creating new compartmentalizations for complex applications, and analyze existing compartmentalized applications to discover design faults and maintenance issues arising from application evolution.}
 }
+
+@TechReport{UCAM-CL-TR-876,
+  author =	 {Watson, Robert N. M. and Neumann, Peter G. and Woodruff,
+          	  Jonathan and Roe, Michael and Anderson, Jonathan and
+          	  Chisnall, David and Davis, Brooks and Joannou, Alexandre
+          	  and Laurie, Ben and Moore, Simon W. and Murdoch, Steven J.
+          	  and Norton, Robert and Son, Stacey},
+  title = 	 {{Capability Hardware Enhanced RISC Instructions: CHERI
+         	   Instruction-Set Architecture}},
+  year = 	 2015,
+  month = 	 sep,
+  url = 	 {http://www.cl.cam.ac.uk/techreports/UCAM-CL-TR-876.pdf},
+  institution =  {University of Cambridge, Computer Laboratory},
+  number = 	 {UCAM-CL-TR-876}
+}
+
 
 @TechReport{UCAM-CL-TR-877,
   author =	 {Watson, Robert N. M. and Chisnall, David and Davis, Brooks
@@ -154,6 +186,7 @@ Unlike other recent proposals, the CHERI implementation is open-source and of su
 	abstract = {CHERI is a hardware-software architecture that combines a capability-system security model with design choices from contemporary processors, Instruction-Set Architectures (ISAs), compilers, and operating systems. At the lowest level, CHERI's fine-grained, in-address-space memory protection mitigates many widely used exploit techniques. However, CHERI's ISA-level capability model can also act as the foundation for a software object-capability model suitable for incremental deployment in compartmentalizing C-language applications to mitigate attacks. Prototyped as an extension to the 64-bit FPGA BERI RISC soft-core processor, FreeBSD operating system, and Clang/LLVM compiler suite, we demonstrate substantial improvements to security, programmability, and scalability as compared to compartmentalization based on pure Memory-Management Unit (MMU) designs. We evaluate CHERI using several real-world UNIX libraries and applications.}
 }
 
+
 @TechReport{UCAM-CL-TR-869,
   author =	 {Watson, Robert N. M. and Chisnall, David and Davis, Brooks
           	  and Koszek, Wojciech and Moore, Simon W. and Murdoch,
@@ -166,6 +199,20 @@ Unlike other recent proposals, the CHERI implementation is open-source and of su
   institution = {University of Cambridge, Computer Laboratory},
   number = 	 {UCAM-CL-TR-869},
   abstract = {The BERI Software Reference documents how to build and use the FreeBSD operating system on the Bluespec Extensible RISC Implementation (BERI) developed by SRI International and the University of Cambridge. The reference is targeted at hardware and software programmers who will work with BERI or BERI-derived systems.}
+}
+
+@TechReport{UCAM-CL-TR-868,
+  author =	 {Watson, Robert N. M. and Woodruff, Jonathan and Chisnall,
+          	  David and Davis, Brooks and Koszek, Wojciech and Markettos,
+          	  A. Theodore and Moore, Simon W. and Murdoch, Steven J. and
+          	  Neumann, Peter G. and Norton, Robert and Roe, Michael},
+  title = 	 {{Bluespec Extensible RISC Implementation: BERI Hardware
+         	   reference}},
+  year = 	 2015,
+  month = 	 apr,
+  url = 	 {http://www.cl.cam.ac.uk/techreports/UCAM-CL-TR-868.pdf},
+  institution =  {University of Cambridge, Computer Laboratory},
+  number = 	 {UCAM-CL-TR-868}
 }
 
 @TechReport{UCAM-CL-TR-864,
