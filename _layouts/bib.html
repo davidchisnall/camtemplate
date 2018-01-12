@@ -33,9 +33,9 @@
     {% assign pdf = entry.url %}
   {% endif %}
 {% endif %}
-<a class="biblink" href="javascript:unhide('bibtex-{{ key }}')">[BibTeX]</a>
+<label class="biblink" for="bibtex-{{ key }}">[BibTeX]</label>
 {% if entry.abstract %}
-<a class="biblink" href="javascript:unhide('abstract-{{ key }}')">[abstract]</a>
+<label class="biblink" for="abstract-{{ key }}">[abstract]</label>
 {% endif %}
 {% if pdf %}
 <a class="biblink" href="{{ pdf }}">[<span style="font-variant: small-caps">pdf</span>]</a>
@@ -49,9 +49,13 @@
 {% if doi %}
 <a class="biblink" href="{{ doi }}">[<span style="font-variant: small-caps">doi</span>]</a>
 {% endif %}
-<pre id="bibtex-{{ key }}" class="hidden">{{ entry.bibtex }}</pre>
+<input type="checkbox" class="hidebox" checked id="bibtex-{{ key }}" />
+<div class="hide">
+<pre class="bibtex">{{ entry.bibtex }}</pre>
+</div>
 {% if entry.abstract %}
-<div class="abstract">
-<p id="abstract-{{ key }}" class="hidden">{{ entry.abstract | newline_to_br }}</p>
+<input type="checkbox" class="hidebox" checked id="abstract-{{ key }}" />
+<div class="hide">
+<p class="abstract">{{ entry.abstract | strip | newline_to_br }}</p>
 </div>
 {% endif %}

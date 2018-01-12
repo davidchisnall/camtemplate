@@ -1,0 +1,29 @@
+label.biblink {
+  color: #003c79;
+}
+label.biblink:hover {
+  text-decoration: underline;
+}
+input.hidebox {
+  position: absolute;
+  left: -999em;
+}
+.hide {
+  max-height: 99em;
+  min-height: 0em;
+  opacity: 1;
+  height: auto;
+  overflow: hidden;
+  transition: opacity 0.5s linear, max-height 0.5s linear;
+}
+input[type="checkbox"]:checked + div {
+  opacity: 0;
+  max-height: 0;
+  border: none;
+}
+pre.bibtex, p.abstract {
+    background-color: #eef;
+    margin: 0 10px 0 10px;
+    padding: 10px;
+}
+
