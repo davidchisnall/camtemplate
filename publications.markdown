@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Publications
-next_section: smallint
 ---
 
 {% comment %}
